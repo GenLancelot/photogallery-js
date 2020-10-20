@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style rel="stylesheet" type="text/css">
+		html,body
+		{
+			width:100%;
+			height:100%;
+			margin:0;
+			padding:0;
+			color:white;
+		}
+		#nag,#stopka
+		{
+			text-align:center;
+			font-size:200%;
+			width:100%;
+			height:10%;
+			background-color:#366C87;
+		}
+		#dziesiatki,#jednosci
+		{
+			float:left;
+			border:solid 2px;
+			padding:1%;
+			margin:1%;
+		}
+		#zad1
+		{
+			background-color:#8F95B4;
+			width:100%;
+			padding:5%;
+			text-align:center;
+		}
+		#zad2
+		{
+			background-color:#5D92AC;
+			width:100%;
+			padding:5%;
+		}
+		#zad3
+		{
+			background-color:#8F95B4;
+			width:100%;
+			padding:5%;
+		}
+		#stl
+		{
+			width:80%;
+			margin:0 auto;
+		}
+		#zad1 input[type="button"]
+		{
+			background-color:#F0DBD1;
+			border:none;
+			transition:1s;
+			padding:3%;
+			color:black;
+		}
+		#zad1 input[type="button"]:hover
+		{
+			color:#F0DBD1;
+			background-color:#A07956;
+		}
+		#zad1 input[disabled]:hover
+		{
+			color:black;
+			background-color:#F0DBD1;
+		}
+		input[type="button"]
+		{
+			padding:1%;
+			background-color:#F0DBD1;
+			border:none;
+			transition:1s;
+			color:black;
+		}
+		input[type="button"]:hover
+		{
+			color:#F0DBD1;
+			background-color:#A07956;
+		}
+		p
+		{
+			margin:0;
+		}
+		*
+		{
+			box-sizing:border-box;
+			
+		}
+		</style>
+	</head>
+	<body onkeydown="przewin()">
+	<script src="script.js"></script>
+		<div id="nag">
+			<p>3.JS-Obiekty DOM</p>
+		</div>
+		<div id="zad1">
+			<p>1. Na podstawie podanego przykładu napisz skrypt (przeglądarka obrazków) który będzie przesuwał kolejne obrazki (min 4) w tył i w przód po kliknięciu na klawisze strzałek, oraz podawał informację w formie alertu po dojściu do początku lub do końca zbioru obrazków.</p>
+			<div id="stl">
+				<input id='prv' type="button" onclick="galeria(-1)"  value="<–" disabled/>
+				<input id='start' type="button" onclick="galeria(0)" value="Wyświetl galerię"/>
+				<input id='nxt' type="button" onclick="galeria(1)"  value="–>" disabled/><br>
+				<img id="zdj"/>
+			</div>
+		</div>
+		<div id="zad2" background-color=white>
+			<p>Napisz skrypt realizujący zadanie licznika kliknięć w przycisk. Licznik działa w dwóch oddzielnych polach tekstowych: jedności i dziesiątki. Licznik liczy od 1 do 99 a później jest automatyczne zerowany lub można go wyzerować klikając z przycisk "Zeruj".</p>
+			<input type="button" onclick="licznik()" value="Kliknij!"/>
+			<input type="button" onclick="zeruj()" value="Zeruj!"/><br>
+			<div id="dziesiatki"></div>
+			<div id="jednosci"></div>
+		</div>
+		<div id="zad3">
+			<p>Napisz skrypt totolotek</p>
+			<input type="button" onclick="totolotek()" value="Kliknij!"/><br>
+			<p id="wynik"></p>
+		</div>
+		<div id="stopka">
+			<p>&copy;Konrad Stolarz -4K</p>
+		</div>
+	</body>
+</html>
